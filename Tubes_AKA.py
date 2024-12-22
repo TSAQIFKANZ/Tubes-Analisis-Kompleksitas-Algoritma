@@ -23,7 +23,7 @@ data = {
 }
 df = pd.DataFrame(data)
 
-# Menampilkan tabel dengan garis
+# Menampilkan tabel
 table_output = df.to_markdown(index=False, tablefmt="grid")
 print("Tabel Perbandingan Waktu Eksekusi:\n")
 print(table_output)
@@ -33,7 +33,7 @@ plt.figure(figsize=(10, 6))
 plt.plot(n, recursive_time, marker='o', color='red', label='Recursive Time')
 plt.plot(n, iterative_time, marker='o', color='blue', label='Iterative Time')
 
-# Memberi label dan judul
+# label dan judul
 plt.title("Perbandingan Waktu Eksekusi: Iteratif vs Rekursif", fontsize=14)
 plt.xlabel("Jumlah Pemesanan (n)", fontsize=12)
 plt.ylabel("Waktu Eksekusi (detik)", fontsize=12)
@@ -41,6 +41,6 @@ plt.yscale("log")  # Menggunakan skala logaritmik untuk memvisualisasikan perbed
 plt.legend()
 plt.grid(True, which="both", linestyle="--", linewidth=0.5)
 
-# Menampilkan grafik
+# Tampilan grafik
 plt.tight_layout()
 plt.show()
